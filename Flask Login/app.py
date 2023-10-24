@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'secret_key'
 
 def check_credentials(username, password):
-    with open('Flask Login\\users.csv', 'r') as file:
+    with open('users.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             if row['username'] == username and row['password'] == password:
